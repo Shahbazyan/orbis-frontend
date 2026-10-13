@@ -1,46 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Orbis — Global Finance, Simplified</title>
-  <meta name="description" content="Orbis makes global payments, currency exchange, and financial workflows effortless for modern teams." />
+  <title>ORBIS — Клуб Китай · Прямые поставки с заводов Китая</title>
+  <meta name="description" content="ORBIS — международный маркетплейс прямых поставок из Китая. Товары с заводов, оптовые цены, совместные покупки." />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- ============ NAVBAR ============ -->
-  <header class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="/" class="navbar__brand" aria-label="Orbis home">
-        <span class="navbar__logo" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.2"/>
-            <path d="M4 16c4 4 8 6 12 6s8-2 12-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M4 16c4-4 8-6 12-6s8 2 12 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="2.2"/>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__flag">🇨🇳 → 🌍</span>
+        <span>Прямые поставки из Китая · Доставка по всему миру</span>
+      </div>
+      <div class="topbar__right">
+        <a href="#" class="topbar__link">Помощь</a>
+        <span class="topbar__sep">·</span>
+        <a href="#" class="topbar__link">Стать поставщиком</a>
+        <span class="topbar__sep">·</span>
+        <a href="#" class="topbar__link">RU / EN</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="./index.html" class="header__brand" aria-label="ORBIS — главная">
+        <span class="header__logo" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" fill="#BD001A"/>
+            <path d="M10 20c3 3 6 5 10 5s7-2 10-5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M10 20c3-3 6-5 10-5s7 2 10 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="20" y1="5" x2="20" y2="35" stroke="#fff" stroke-width="2.2"/>
           </svg>
         </span>
-        <span class="navbar__name">Orbis</span>
+        <span class="header__brand-text">
+          <span class="header__name">ORBIS</span>
+          <span class="header__tagline">Клуб Китай</span>
+        </span>
       </a>
 
-      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
-        <a href="#features" class="navbar__link">Features</a>
-        <a href="#how" class="navbar__link">How it works</a>
-        <a href="#pricing" class="navbar__link">Pricing</a>
-        <a href="#faq" class="navbar__link">FAQ</a>
-      </nav>
-
-      <div class="navbar__actions">
-        <a href="/login.html" class="btn btn--ghost">Sign in</a>
-        <a href="/signup.html" class="btn btn--primary">Get started</a>
+      <div class="header__search">
+        <svg class="header__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input type="search" class="header__search-input" placeholder="Искать товары, бренды, категории..." aria-label="Поиск товаров" />
+        <button class="header__search-btn" aria-label="Найти">Найти</button>
       </div>
 
-      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false">
+      <nav class="header__actions" aria-label="Личный кабинет">
+        <a href="./favorites.html" class="header__action" aria-label="Избранное">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span class="header__action-label">Избранное</span>
+          <span class="header__badge">3</span>
+        </a>
+        <a href="./orders.html" class="header__action" aria-label="Заказы">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3 8-8M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="header__action-label">Заказы</span>
+        </a>
+        <a href="./cart.html" class="header__action header__action--cart" aria-label="Корзина">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="21" r="1.5" fill="currentColor"/><circle cx="18" cy="21" r="1.5" fill="currentColor"/></svg>
+          <span class="header__action-label">Корзина</span>
+          <span class="header__badge">5</span>
+        </a>
+      </nav>
+
+      <button class="header__burger" id="burger" aria-label="Меню" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
+    </div>
+
+    <!-- Category nav -->
+    <div class="catnav">
+      <div class="container catnav__inner">
+        <button class="catnav__catalog" id="catalogBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Каталог</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <nav class="catnav__links" aria-label="Категории">
+          <a href="./catalog.html" class="catnav__link">🔥 Хиты</a>
+          <a href="./catalog.html" class="catnav__link">⚡ Скидки</a>
+          <a href="./factories.html" class="catnav__link">С заводов</a>
+          <a href="./wholesale.html" class="catnav__link">Опт</a>
+          <a href="./groupbuy.html" class="catnav__link">Совместные покупки</a>
+          <a href="./new.html" class="catnav__link">Новинки</a>
+          <a href="./brands.html" class="catnav__link">Бренды</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -48,265 +107,609 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="container hero__inner">
-        <div class="hero__content">
-          <span class="eyebrow">
-            <span class="eyebrow__dot"></span>
-            New — Orbis Pay 2.0 is live
-          </span>
-          <h1 class="hero__title">
-            Global finance, <span class="gradient-text">simplified.</span>
-          </h1>
-          <p class="hero__subtitle">
-            Send, receive, and convert currencies across 180+ countries with transparent
-            rates, real-time settlement, and enterprise-grade security — all in one dashboard.
-          </p>
-          <div class="hero__cta">
-            <a href="/signup.html" class="btn btn--primary btn--lg">
-              Open your account
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-            <a href="#how" class="btn btn--outline btn--lg">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <polygon points="6 4 20 12 6 20 6 4" fill="currentColor"/>
-              </svg>
-              Watch demo
-            </a>
-          </div>
-
-          <ul class="hero__trust">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              No setup fees
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              SOC 2 Type II
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              24/7 support
-            </li>
+        <!-- Side catalog menu -->
+        <aside class="hero__side" aria-label="Быстрые категории">
+          <div class="hero__side-title">Все категории</div>
+          <ul class="hero__side-list">
+            <li><a href="#"><span>📱</span> Электроника</a></li>
+            <li><a href="#"><span>👕</span> Одежда и обувь</a></li>
+            <li><a href="#"><span>🏠</span> Дом и сад</a></li>
+            <li><a href="#"><span>💄</span> Красота и здоровье</a></li>
+            <li><a href="#"><span>🧸</span> Детям и игрушки</a></li>
+            <li><a href="#"><span>🚗</span> Авто и мото</a></li>
+            <li><a href="#"><span>⚽</span> Спорт и отдых</a></li>
+            <li><a href="#"><span>🛠️</span> Инструменты</a></li>
+            <li><a href="#"><span>💍</span> Украшения</a></li>
           </ul>
+        </aside>
+
+        <!-- Main banner slider -->
+        <div class="hero__slider" id="heroSlider">
+          <div class="hero__slide hero__slide--active" data-slide="0">
+            <div class="hero__slide-content">
+              <span class="hero__eyebrow">Прямые поставки · Без посредников</span>
+              <h1 class="hero__title">Товары с заводов Китая<br/>по ценам производителя</h1>
+              <p class="hero__subtitle">Более 2 000 000 товаров от 15 000 проверенных фабрик. Экономия до 70% по сравнению с розницей.</p>
+              <div class="hero__cta">
+                <a href="./catalog.html" class="btn btn--primary">Перейти в каталог</a>
+                <a href="./factories.html" class="btn btn--ghost">Список заводов →</a>
+              </div>
+            </div>
+            <div class="hero__slide-visual" aria-hidden="true">
+              <div class="hero__card hero__card--1">
+                <img src="https://picsum.photos/seed/orbis-factory-1/280/200" alt="" />
+                <div class="hero__card-label">Foshan Electronics</div>
+              </div>
+              <div class="hero__card hero__card--2">
+                <img src="https://picsum.photos/seed/orbis-factory-2/220/160" alt="" />
+                <div class="hero__card-label">Shenzhen Tech</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__slide" data-slide="1">
+            <div class="hero__slide-content">
+              <span class="hero__eyebrow">Совместные покупки</span>
+              <h1 class="hero__title">Чем больше нас —<br/>тем ниже цена</h1>
+              <p class="hero__subtitle">Объединяйтесь с другими покупателями и получайте оптовые цены на розничные объёмы.</p>
+              <div class="hero__cta">
+                <a href="./groupbuy.html" class="btn btn--primary">Присоединиться</a>
+              </div>
+            </div>
+            <div class="hero__slide-visual" aria-hidden="true">
+              <div class="hero__card hero__card--1">
+                <img src="https://picsum.photos/seed/orbis-group-1/280/200" alt="" />
+                <div class="hero__card-label">−42% при 50 участниках</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__slide" data-slide="2">
+            <div class="hero__slide-content">
+              <span class="hero__eyebrow">Оптовикам · B2B</span>
+              <h1 class="hero__title">Особые условия<br/>для оптовых закупок</h1>
+              <p class="hero__subtitle">Персональный менеджер, отсрочка платежа, прямые контракты с фабриками.</p>
+              <div class="hero__cta">
+                <a href="./wholesale.html" class="btn btn--primary">Стать оптовиком</a>
+              </div>
+            </div>
+            <div class="hero__slide-visual" aria-hidden="true">
+              <div class="hero__card hero__card--1">
+                <img src="https://picsum.photos/seed/orbis-wholesale-1/280/200" alt="" />
+                <div class="hero__card-label">MOQ от 100 шт.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__dots" role="tablist">
+            <button class="hero__dot is-active" data-dot="0" aria-label="Слайд 1"></button>
+            <button class="hero__dot" data-dot="1" aria-label="Слайд 2"></button>
+            <button class="hero__dot" data-dot="2" aria-label="Слайд 3"></button>
+          </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="card hero__card">
-            <div class="hero__card-head">
-              <div class="hero__card-title">Live balance</div>
-              <div class="hero__card-badge">USD</div>
-            </div>
-            <div class="hero__card-amount" data-counter="128450">
-              <span class="hero__card-currency">$</span>
-              <span class="hero__card-value">0</span>
-              <span class="hero__card-cents">.00</span>
-            </div>
-            <div class="hero__card-change positive">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17l10-10M7 7h10v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              +4.82% this month
-            </div>
-            <div class="hero__card-chart">
-              <svg viewBox="0 0 300 80" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.35"/>
-                    <stop offset="100%" stop-color="var(--color-primary)" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path class="hero__chart-area" d="M0,60 C40,50 60,30 100,35 C140,40 160,55 200,45 C240,35 260,20 300,15 L300,80 L0,80 Z" fill="url(#chartGrad)"/>
-                <path class="hero__chart-line" d="M0,60 C40,50 60,30 100,35 C140,40 160,55 200,45 C240,35 260,20 300,15" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round"/>
-              </svg>
-            </div>
-          </div>
-
-          <div class="card hero__mini hero__mini--tx">
-            <div class="hero__mini-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="hero__mini-body">
-              <div class="hero__mini-title">Transfer sent</div>
-              <div class="hero__mini-sub">EUR → GBP · 2s ago</div>
-            </div>
-            <div class="hero__mini-amount">€ 2,400.00</div>
-          </div>
-
-          <div class="card hero__mini hero__mini--rate">
-            <div class="hero__mini-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <div class="hero__mini-body">
-              <div class="hero__mini-title">Live rate</div>
-              <div class="hero__mini-sub">1 USD = 0.92 EUR</div>
-            </div>
-            <div class="hero__mini-amount positive">▲ 0.12%</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__bg" aria-hidden="true">
-        <div class="hero__orb hero__orb--1"></div>
-        <div class="hero__orb hero__orb--2"></div>
+        <!-- Side promo cards -->
+        <aside class="hero__promos">
+          <a href="./new.html" class="hero__promo hero__promo--new">
+            <div class="hero__promo-title">Новинки недели</div>
+            <div class="hero__promo-sub">Свежие поступления с фабрик</div>
+            <div class="hero__promo-arrow">→</div>
+          </a>
+          <a href="./favorites.html" class="hero__promo hero__promo--fav">
+            <div class="hero__promo-title">Ваше избранное</div>
+            <div class="hero__promo-sub">3 товара ждут снижения цены</div>
+            <div class="hero__promo-arrow">→</div>
+          </a>
+        </aside>
       </div>
     </section>
 
-    <!-- ============ LOGOS ============ -->
-    <section class="logos" aria-label="Trusted by">
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section categories">
       <div class="container">
-        <p class="logos__label">Trusted by teams at</p>
-        <div class="logos__track">
-          <div class="logos__item">Acme Corp</div>
-          <div class="logos__item">Northwind</div>
-          <div class="logos__item">Globex</div>
-          <div class="logos__item">Initech</div>
-          <div class="logos__item">Umbrella</div>
-          <div class="logos__item">Hooli</div>
-          <div class="logos__item">Soylent</div>
-          <div class="logos__item">Massive Dynamic</div>
+        <div class="section__head">
+          <h2 class="section__title">Популярные категории</h2>
+          <a href="./catalog.html" class="section__link">Все категории →</a>
+        </div>
+        <div class="categories__grid">
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#FEE2E2;color:#BD001A">📱</div>
+            <div class="cat__name">Электроника</div>
+            <div class="cat__count">248 500+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#FEF3C7;color:#B45309">👕</div>
+            <div class="cat__name">Одежда</div>
+            <div class="cat__count">412 300+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#DBEAFE;color:#1E40AF">🏠</div>
+            <div class="cat__name">Дом и сад</div>
+            <div class="cat__count">186 700+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#FCE7F3;color:#BE185D">💄</div>
+            <div class="cat__name">Красота</div>
+            <div class="cat__count">94 200+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#D1FAE5;color:#047857">🧸</div>
+            <div class="cat__name">Детям</div>
+            <div class="cat__count">76 800+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#E0E7FF;color:#4338CA">🚗</div>
+            <div class="cat__name">Авто</div>
+            <div class="cat__count">58 400+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#FEE2E2;color:#BD001A">⚽</div>
+            <div class="cat__name">Спорт</div>
+            <div class="cat__count">42 100+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#FEF3C7;color:#B45309">🛠️</div>
+            <div class="cat__name">Инструменты</div>
+            <div class="cat__count">33 900+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#DBEAFE;color:#1E40AF">💍</div>
+            <div class="cat__name">Украшения</div>
+            <div class="cat__count">28 600+</div>
+          </a>
+          <a href="./catalog.html" class="cat">
+            <div class="cat__icon" style="background:#D1FAE5;color:#047857">🍳</div>
+            <div class="cat__name">Кухня</div>
+            <div class="cat__count">51 200+</div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ FEATURES ============ -->
-    <section class="features" id="features">
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="section products">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Features</span>
-          <h2 class="section-title">Everything you need to move money globally</h2>
-          <p class="section-subtitle">
-            A single platform for payments, FX, invoicing, and reconciliation — built for
-            teams that operate across borders.
-          </p>
+        <div class="section__head">
+          <h2 class="section__title">Хиты продаж</h2>
+          <div class="section__tabs" role="tablist">
+            <button class="section__tab is-active" data-tab="all">Все</button>
+            <button class="section__tab" data-tab="new">Новинки</button>
+            <button class="section__tab" data-tab="sale">Скидки</button>
+            <button class="section__tab" data-tab="top">Топ</button>
+          </div>
         </div>
 
-        <div class="features__grid">
-          <article class="feature feature--wide">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <div class="products__grid">
+          <!-- Product 1 -->
+          <article class="product">
+            <a href="./product.html" class="product__media">
+              <span class="product__badge product__badge--sale">−38%</span>
+              <button class="product__fav" aria-label="В избранное">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+              <img src="https://picsum.photos/seed/orbis-p1/400/400" alt="Беспроводные наушники" loading="lazy" />
+            </a>
+            <div class="product__body">
+              <div class="product__price">
+                <span class="product__price-now">2 490 ₽</span>
+                <span class="product__price-old">3 990 ₽</span>
+              </div>
+              <a href="./product.html" class="product__title">Беспроводные наушники TWS с шумоподавлением ANC</a>
+              <div class="product__meta">
+                <span class="product__rating">★ 4.8 <span class="product__reviews">(1 240)</span></span>
+                <span class="product__sold">3 450 продано</span>
+              </div>
+              <div class="product__delivery">🚚 Доставка 10–14 дней</div>
             </div>
-            <h3 class="feature__title">Instant global transfers</h3>
-            <p class="feature__desc">
-              Move funds to 180+ countries in seconds using local rails. No intermediary banks,
-              no hidden fees, no waiting.
-            </p>
           </article>
 
-          <article class="feature">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <!-- Product 2 -->
+          <article class="product">
+            <a href="./product.html" class="product__media">
+              <span class="product__badge product__badge--hit">Хит</span>
+              <button class="product__fav" aria-label="В избранное">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+              <img src="https://picsum.photos/seed/orbis-p2/400/400" alt="Умные часы" loading="lazy" />
+            </a>
+            <div class="product__body">
+              <div class="product__price">
+                <span class="product__price-now">4 890 ₽</span>
+                <span class="product__price-old">6 490 ₽</span>
+              </div>
+              <a href="./product.html" class="product__title">Смарт-часы AMOLED 1.9" с NFC и GPS</a>
+              <div class="product__meta">
+                <span class="product__rating">★ 4.9 <span class="product__reviews">(2 812)</span></span>
+                <span class="product__sold">8 120 продано</span>
+              </div>
+              <div class="product__delivery">🚚 Доставка 8–12 дней</div>
             </div>
-            <h3 class="feature__title">Real FX rates</h3>
-            <p class="feature__desc">
-              Mid-market rates with a transparent, fixed markup. Lock rates for up to 72 hours.
-            </p>
           </article>
 
-          <article class="feature">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <!-- Product 3 -->
+          <article class="product">
+            <a href="./product.html" class="product__media">
+              <span class="product__badge product__badge--new">New</span>
+              <button class="product__fav" aria-label="В избранное">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+              <img src="https://picsum.photos/seed/orbis-p3/400/400" alt="Робот-пылесос" loading="lazy" />
+            </a>
+            <div class="product__body">
+              <div class="product__price">
+                <span class="product__price-now">12 990 ₽</span>
+                <span class="product__price-old">18 500 ₽</span>
+              </div>
+              <a href="./product.html" class="product__title">Робот-пылесос с влажной уборкой и базой самоочистки</a>
+              <div class="product__meta">
+                <span class="product__rating">★ 4.7 <span class="product__reviews">(642)</span></span>
+                <span class="product__sold">1 280 продано</span>
+              </div>
+              <div class="product__delivery">🚚 Доставка 12–18 дней</div>
             </div>
-            <h3 class="feature__title">Bank-grade security</h3>
-            <p class="feature__desc">
-              End-to-end encryption, biometric auth, and SOC 2 Type II compliance out of the box.
-            </p>
           </article>
 
-          <article class="feature">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <!-- Product 4 -->
+          <article class="product">
+            <a href="./product.html" class="product__media">
+              <span class="product__badge product__badge--sale">−52%</span>
+              <button class="product__fav" aria-label="В избранное">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+              <img src="https://picsum.photos/seed/orbis-p4/400/400" alt="Рюкзак" loading="lazy" />
+            </a>
+            <div class="product__body">
+              <div class="product__price">
+                <span class="product__price-now">1 890 ₽</span>
+                <span class="product__price-old">3 900 ₽</span>
+              </div>
+              <a href="./product.html" class="product__title">Городской рюкзак с USB-портом, водоотталкивающий</a>
+              <div class="product__meta">
+                <span class="product__rating">★ 4.6 <span class="product__reviews">(912)</span></span>
+                <span class="product__sold">4 560 продано</span>
+              </div>
+              <div class="product__delivery">🚚 Доставка 9–13 дней</div>
             </div>
-            <h3 class="feature__title">Multi-currency wallets</h3>
-            <p class="feature__desc">
-              Hold 40+ currencies in one account. Convert, send, or receive — all without leaving the app.
-            </p>
           </article>
 
-          <article class="feature">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <!-- Product 5 -->
+          <article class="product">
+            <a href="./product.html" class="product__media">
+              <button class="product__fav" aria-label="В избранное">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z" stroke="currentColor" stroke-width="1.8"/></svg>
+              </button>
+              <img src="https://picsum.photos/seed/orbis-p5/400/400" alt="Кофемашина" loading="lazy" />
+            </a>
+            <div class="product__body">
+              <div class="product__price">
+                <span class="product__price-now">8 490 ₽</span>
+                <span class="product__price-old">11 200 ₽</span>
+              </div>
+              <a href="./product.html" class="product__title">Автоматическая кофемашина капучино, 19 бар</a>
+              <div class="product__meta">
+                <span class="product__rating">★ 4.8 <span class="product__reviews">(384)</span></span>
+                <span class="product__sold">890 продано</span>
+              </div>
+              <div class="product__delivery">🚚 Доставка 14–20 дней</div>
             </div>
-            <h3 class="feature__title">Automated invoicing</h3>
-            <p class="feature__desc">
-              Generate compliant invoices, auto-match payments, and reconcile in real time.
-            </p>
           </article>
+        </div>
 
-          <article class="feature feature--wide">
-            <div class="feature__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 14l4-4 4 4 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="feature__title">Analytics & reporting</h3>
-            <p class="feature__desc">
-              Live dashboards, exportable reports, and deep insights into cash flow, FX exposure,
-              and team activity — all in one place.
-            </p>
-          </article>
+        <div class="section__more">
+          <a href="./catalog.html" class="btn btn--outline">Смотреть все товары</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ STATS ============ -->
-    <section class="stats">
+    <!-- ============ FACTORY / SUPPLIER ============ -->
+    <section class="section factories">
       <div class="container">
-        <div class="stats__grid">
-          <div class="stat">
-            <div class="stat__value" data-counter="180">0</div>
-            <div class="stat__label">Countries supported</div>
+        <div class="factories__inner">
+          <div class="factories__content">
+            <span class="eyebrow">Прямые контракты</span>
+            <h2 class="section__title factories__title">Работаем напрямую<br/>с <span class="text-red">15 000+ заводами</span> Китая</h2>
+            <p class="factories__desc">
+              Мы лично проверяем каждую фабрику: производство, сертификаты, условия.
+              Вы получаете товары без наценок импортёров и дистрибьюторов — по ценам,
+              доступным только оптовикам.
+            </p>
+            <ul class="factories__list">
+              <li>
+                <span class="factories__check">✓</span>
+                <div>
+                  <strong>Проверенные поставщики</strong>
+                  <p>Аудит производства, сертификаты ISO, CE, RoHS</p>
+                </div>
+              </li>
+              <li>
+                <span class="factories__check">✓</span>
+                <div>
+                  <strong>OEM / ODM производство</strong>
+                  <p>Брендирование, кастомная упаковка, разработка под вас</p>
+                </div>
+              </li>
+              <li>
+                <span class="factories__check">✓</span>
+                <div>
+                  <strong>Контроль качества</strong>
+                  <p>Инспекция перед отгрузкой, фото- и видеоотчёты</p>
+                </div>
+              </li>
+            </ul>
+            <div class="factories__cta">
+              <a href="./factories.html" class="btn btn--primary">Все фабрики</a>
+              <a href="./how.html" class="btn btn--ghost">Как это работает →</a>
+            </div>
           </div>
-          <div class="stat">
-            <div class="stat__value" data-counter="40">0</div>
-            <div class="stat__label">Currencies held</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value" data-counter="99" data-suffix=".9%">0</div>
-            <div class="stat__label">Uptime SLA</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value" data-counter="12" data-suffix="M+">0</div>
-            <div class="stat__label">Transactions / month</div>
+
+          <div class="factories__showcase">
+            <div class="factory-card">
+              <img src="https://picsum.photos/seed/orbis-fact-1/500/320" alt="Фабрика электроники" loading="lazy" />
+              <div class="factory-card__body">
+                <div class="factory-card__top">
+                  <div>
+                    <div class="factory-card__name">Shenzhen Tech Co.</div>
+                    <div class="factory-card__loc">📍 Гуандун, Китай</div>
+                  </div>
+                  <span class="factory-card__verified">✓ Verified</span>
+                </div>
+                <div class="factory-card__tags">
+                  <span>Электроника</span>
+                  <span>OEM</span>
+                  <span>8 лет</span>
+                </div>
+              </div>
+            </div>
+            <div class="factory-card factory-card--sm">
+              <img src="https://picsum.photos/seed/orbis-fact-2/400/240" alt="Текстильная фабрика" loading="lazy" />
+              <div class="factory-card__body">
+                <div class="factory-card__name">Yiwu Textile Ltd.</div>
+                <div class="factory-card__loc">📍 Чжэцзян · 12 лет</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ HOW IT WORKS ============ -->
-    <section class="how" id="how">
+    <!-- ============ WHOLESALE ============ -->
+    <section class="section wholesale">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">How it works</span>
-          <h2 class="section-title">Up and running in under 5 minutes</h2>
+        <div class="section__head">
+          <h2 class="section__title">Оптовые предложения</h2>
+          <p class="section__subtitle">Чем больше партия — тем ниже цена. Прямые контракты с фабриками.</p>
+          <a href="./wholesale.html" class="section__link">Все оптовые товары →</a>
         </div>
 
-        <div class="steps">
-          <div class="step">
-            <div class="step__num">01</div>
-            <h3 class="step__title">Create your account</h3>
-            <p class="step__desc">Sign up with your email, verify your identity, and you're in.</p>
+        <div class="wholesale__grid">
+          <article class="ws-card">
+            <div class="ws-card__media">
+              <img src="https://picsum.photos/seed/orbis-ws-1/400/280" alt="Силиконовые чехлы" loading="lazy" />
+              <span class="ws-card__moq">MOQ 200 шт.</span>
+            </div>
+            <div class="ws-card__body">
+              <h3 class="ws-card__title">Силиконовые чехлы для iPhone 15</h3>
+              <div class="ws-card__tiers">
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">200–499 шт.</div>
+                  <div class="ws-tier__price">180 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">500–999 шт.</div>
+                  <div class="ws-tier__price">145 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier ws-tier--best">
+                  <div class="ws-tier__qty">1000+ шт.</div>
+                  <div class="ws-tier__price">110 ₽<span>/шт.</span></div>
+                </div>
+              </div>
+              <a href="./wholesale.html" class="btn btn--outline ws-card__btn">Запросить оптом</a>
+            </div>
+          </article>
+
+          <article class="ws-card">
+            <div class="ws-card__media">
+              <img src="https://picsum.photos/seed/orbis-ws-2/400/280" alt="LED лампы" loading="lazy" />
+              <span class="ws-card__moq">MOQ 500 шт.</span>
+            </div>
+            <div class="ws-card__body">
+              <h3 class="ws-card__title">LED лампы E27, 12W, тёплый свет</h3>
+              <div class="ws-card__tiers">
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">500–999 шт.</div>
+                  <div class="ws-tier__price">95 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">1000–4999 шт.</div>
+                  <div class="ws-tier__price">78 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier ws-tier--best">
+                  <div class="ws-tier__qty">5000+ шт.</div>
+                  <div class="ws-tier__price">62 ₽<span>/шт.</span></div>
+                </div>
+              </div>
+              <a href="./wholesale.html" class="btn btn--outline ws-card__btn">Запросить оптом</a>
+            </div>
+          </article>
+
+          <article class="ws-card">
+            <div class="ws-card__media">
+              <img src="https://picsum.photos/seed/orbis-ws-3/400/280" alt="Спортивные бутылки" loading="lazy" />
+              <span class="ws-card__moq">MOQ 300 шт.</span>
+            </div>
+            <div class="ws-card__body">
+              <h3 class="ws-card__title">Спортивные бутылки 750мл, тритан</h3>
+              <div class="ws-card__tiers">
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">300–599 шт.</div>
+                  <div class="ws-tier__price">220 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier">
+                  <div class="ws-tier__qty">600–1499 шт.</div>
+                  <div class="ws-tier__price">175 ₽<span>/шт.</span></div>
+                </div>
+                <div class="ws-tier ws-tier--best">
+                  <div class="ws-tier__qty">1500+ шт.</div>
+                  <div class="ws-tier__price">130 ₽<span>/шт.</span></div>
+                </div>
+              </div>
+              <a href="./wholesale.html" class="btn btn--outline ws-card__btn">Запросить оптом</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GROUP BUYING ============ -->
+    <section class="section groupbuy">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Совместные покупки</h2>
+          <p class="section__subtitle">Объединяйтесь с другими покупателями — чем больше участников, тем ниже цена. Успейте присоединиться!</p>
+          <a href="./groupbuy.html" class="section__link">Все акции →</a>
+        </div>
+
+        <div class="gb__grid">
+          <article class="gb-card">
+            <div class="gb-card__media">
+              <img src="https://picsum.photos/seed/orbis-gb-1/400/300" alt="Фен Dyson-аналог" loading="lazy" />
+              <span class="gb-card__discount">−65%</span>
+            </div>
+            <div class="gb-card__body">
+              <h3 class="gb-card__title">Фен-стайлер с ионизацией, 1800W</h3>
+              <div class="gb-card__prices">
+                <div class="gb-card__current">2 490 ₽</div>
+                <div class="gb-card__old">6 990 ₽</div>
+              </div>
+              <div class="gb-card__progress-wrap">
+                <div class="gb-card__progress-info">
+                  <span><strong>78</strong> из 100 участников</span>
+                  <span class="gb-card__time">⏱ 2 дня 14 ч</span>
+                </div>
+                <div class="gb-card__progress">
+                  <div class="gb-card__bar" style="width:78%"></div>
+                </div>
+              </div>
+              <a href="./groupbuy.html" class="btn btn--primary gb-card__btn">Присоединиться</a>
+            </div>
+          </article>
+
+          <article class="gb-card">
+            <div class="gb-card__media">
+              <img src="https://picsum.photos/seed/orbis-gb-2/400/300" alt="Набор кастрюль" loading="lazy" />
+              <span class="gb-card__discount">−58%</span>
+            </div>
+            <div class="gb-card__body">
+              <h3 class="gb-card__title">Набор кастрюль из нерж. стали, 6 предметов</h3>
+              <div class="gb-card__prices">
+                <div class="gb-card__current">3 890 ₽</div>
+                <div class="gb-card__old">8 900 ₽</div>
+              </div>
+              <div class="gb-card__progress-wrap">
+                <div class="gb-card__progress-info">
+                  <span><strong>42</strong> из 80 участников</span>
+                  <span class="gb-card__time">⏱ 4 дня 08 ч</span>
+                </div>
+                <div class="gb-card__progress">
+                  <div class="gb-card__bar" style="width:52%"></div>
+                </div>
+              </div>
+              <a href="./groupbuy.html" class="btn btn--primary gb-card__btn">Присоединиться</a>
+            </div>
+          </article>
+
+          <article class="gb-card">
+            <div class="gb-card__media">
+              <img src="https://picsum.photos/seed/orbis-gb-3/400/300" alt="Электросамокат" loading="lazy" />
+              <span class="gb-card__discount">−45%</span>
+            </div>
+            <div class="gb-card__body">
+              <h3 class="gb-card__title">Электросамокат 350W, запас хода 30 км</h3>
+              <div class="gb-card__prices">
+                <div class="gb-card__current">18 900 ₽</div>
+                <div class="gb-card__old">34 500 ₽</div>
+              </div>
+              <div class="gb-card__progress-wrap">
+                <div class="gb-card__progress-info">
+                  <span><strong>19</strong> из 30 участников</span>
+                  <span class="gb-card__time">⏱ 1 день 06 ч</span>
+                </div>
+                <div class="gb-card__progress">
+                  <div class="gb-card__bar" style="width:63%"></div>
+                </div>
+              </div>
+              <a href="./groupbuy.html" class="btn btn--primary gb-card__btn">Присоединиться</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFITS ============ -->
+    <section class="section benefits">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Почему Orbis</h2>
+          <p class="section__subtitle">Мы делаем закупки в Китае простыми, безопасными и выгодными</p>
+        </div>
+
+        <div class="benefits__grid">
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#FEE2E2;color:#BD001A">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Прямые поставки</h3>
+            <p class="benefit__desc">Без посредников и импортёров — цены от фабрик, экономия до 70%</p>
           </div>
-          <div class="step">
-            <div class="step__num">02</div>
-            <h3 class="step__title">Fund your wallet</h3>
-            <p class="step__desc">Add funds via bank transfer, card, or wire in your local currency.</p>
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#DBEAFE;color:#1E40AF">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Проверенные поставщики</h3>
+            <p class="benefit__desc">Личный аудит фабрик, сертификаты, инспекция качества перед отгрузкой</p>
           </div>
-          <div class="step">
-            <div class="step__num">03</div>
-            <h3 class="step__title">Send globally</h3>
-            <p class="step__desc">Pay vendors, contractors, or teams anywhere — at the real rate.</p>
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#D1FAE5;color:#047857">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Доставка по миру</h3>
+            <p class="benefit__desc">Логистика под ключ: от склада фабрики до вашей двери, отслеживание на каждом этапе</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#FEF3C7;color:#B45309">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Безопасные платежи</h3>
+            <p class="benefit__desc">Деньги замораживаются до подтверждения получения. Защита покупателя 100%</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#FCE7F3;color:#BE185D">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Поддержка на русском</h3>
+            <p class="benefit__desc">Персональный менеджер, чат 24/7, помощь на всех этапах закупки</p>
+          </div>
+          <div class="benefit">
+            <div class="benefit__icon" style="background:#E0E7FF;color:#4338CA">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="benefit__title">Гарантия возврата</h3>
+            <p class="benefit__desc">Не подошёл товар — вернём деньги в течение 30 дней без лишних вопросов</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ CTA ============ -->
-    <section class="cta">
-      <div class="container cta__inner">
-        <h2 class="cta__title">Ready to simplify your global finance?</h2>
-        <p class="cta__subtitle">
-          Join thousands of teams moving money smarter with Orbis.
-        </p>
-        <div class="cta__actions">
-          <a href="/signup.html" class="btn btn--primary btn--lg">Start for free</a>
-          <a href="/contact.html" class="btn btn--outline btn--lg">Talk to sales</a>
+    <!-- ============ CTA BANNER ============ -->
+    <section class="cta-banner">
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">Начните закупать с Orbis сегодня</h2>
+          <p class="cta-banner__subtitle">Регистрация бесплатна. Первые заказы — с персональной скидкой 10%</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="./signup.html" class="btn btn--white">Создать аккаунт</a>
+          <a href="./contact.html" class="btn btn--white-outline">Связаться с нами</a>
         </div>
       </div>
     </section>
@@ -314,51 +717,93 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="/" class="navbar__brand">
-          <span class="navbar__logo" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
-              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.2"/>
-              <path d="M4 16c4 4 8 6 12 6s8-2 12-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <path d="M4 16c4-4 8-6 12-6s8 2 12 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-              <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="2.2"/>
-            </svg>
-          </span>
-          <span class="navbar__name">Orbis</span>
-        </a>
-        <p class="footer__tagline">Global finance, simplified.</p>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__col footer__col--brand">
+          <a href="./index.html" class="header__brand">
+            <span class="header__logo" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="18" fill="#BD001A"/>
+                <path d="M10 20c3 3 6 5 10 5s7-2 10-5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                <path d="M10 20c3-3 6-5 10-5s7 2 10 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+                <line x1="20" y1="5" x2="20" y2="35" stroke="#fff" stroke-width="2.2"/>
+              </svg>
+            </span>
+            <span class="header__brand-text">
+              <span class="header__name">ORBIS</span>
+              <span class="header__tagline">Клуб Китай</span>
+            </span>
+          </a>
+          <p class="footer__about">
+            Международная платформа прямых поставок из Китая. Соединяем покупателей
+            с проверенными фабриками и оптовыми поставщиками.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Telegram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3L18.7 20c-.2 1-.9 1.3-1.8.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-.9.5l.3-4.8 8.7-7.9c.4-.3-.1-.5-.6-.2L6.6 13.8l-4.7-1.5c-1-.3-1-1 .2-1.5L20.3 3c.8-.3 1.6.2 1.6 1.3z"/></svg></a>
+            <a href="#" aria-label="VK"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.8 17.3c-5.6 0-8.8-3.8-9-10.2h2.8c.1 4.7 2.2 6.7 3.8 7.1V7.1h2.6v4c1.6-.2 3.3-2 3.9-4h2.6c-.5 2.5-2.1 4.3-3.4 5 .3.2.5.4.8.8 1.3 1.3 2.5 4 2.5 4h-2.9s-1.2-1.9-2.3-3c-.6-.6-.9-.8-1.2-.8v3.8c2.1.4 3.9 1.6 5 3.2H3.8z"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.3A10 10 0 1012 2z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5c0-1.7-1.4-3-3-3H4c-1.7 0-3 1.3-3 3v9c0 1.7 1.3 3 3 3h16c1.7 0 3-1.3 3-3v-9zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Покупателям</h4>
+          <a href="./catalog.html">Каталог товаров</a>
+          <a href="./how.html">Как сделать заказ</a>
+          <a href="./delivery.html">Доставка и оплата</a>
+          <a href="./returns.html">Возврат товара</a>
+          <a href="./groupbuy.html">Совместные покупки</a>
+          <a href="./faq.html">Частые вопросы</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Партнёрам</h4>
+          <a href="./supplier.html">Стать поставщиком</a>
+          <a href="./wholesale.html">Оптовые закупки</a>
+          <a href="./affiliate.html">Партнёрская программа</a>
+          <a href="./api.html">API для бизнеса</a>
+          <a href="./factories.html">База фабрик</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Компания</h4>
+          <a href="./about.html">О нас</a>
+          <a href="./news.html">Новости</a>
+          <a href="./careers.html">Вакансии</a>
+          <a href="./press.html">Пресса</a>
+          <a href="./contact.html">Контакты</a>
+        </div>
+
+        <div class="footer__col">
+          <h4>Контакты</h4>
+          <div class="footer__contact">
+            <div>📞 <a href="tel:+78001234567">+7 800 123-45-67</a></div>
+            <div>✉️ <a href="mailto:hello@orbis.club">hello@orbis.club</a></div>
+            <div>🕐 Пн–Вс: 09:00 – 21:00</div>
+            <div>📍 Офис: Москва, Шэньчжэнь</div>
+          </div>
+        </div>
       </div>
 
-      <div class="footer__col">
-        <h4>Product</h4>
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#">Security</a>
-        <a href="#">Roadmap</a>
+      <div class="footer__payments">
+        <span class="footer__payments-label">Принимаем:</span>
+        <div class="footer__pay-list">
+          <span class="pay-chip">VISA</span>
+          <span class="pay-chip">MasterCard</span>
+          <span class="pay-chip">МИР</span>
+          <span class="pay-chip">UnionPay</span>
+          <span class="pay-chip">СБП</span>
+          <span class="pay-chip">Alipay</span>
+          <span class="pay-chip">WeChat Pay</span>
+        </div>
       </div>
-      <div class="footer__col">
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="#">Press</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-      <div class="footer__col">
-        <h4>Resources</h4>
-        <a href="#">Docs</a>
-        <a href="#">API</a>
-        <a href="#">Blog</a>
-        <a href="#">Status</a>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>© 2026 Orbis, Inc. All rights reserved.</p>
+
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 ORBIS · Клуб Китай. Все права защищены.</div>
         <div class="footer__legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Cookies</a>
+          <a href="./privacy.html">Политика конфиденциальности</a>
+          <a href="./terms.html">Пользовательское соглашение</a>
+          <a href="./cookies.html">Cookies</a>
         </div>
       </div>
     </div>
