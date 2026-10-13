@@ -1,119 +1,116 @@
 /* =========================================================
-   Orbis — Home page interactions
+   ORBIS — Home page interactions
    ========================================================= */
 (function () {
   "use strict";
 
-  /* ---------- Navbar: scroll shadow + mobile toggle ---------- */
-  const navbar = document.getElementById("navbar");
-  const toggle = document.getElementById("navbarToggle");
+  /* ---------- Hero slider ---------- */
+  const slider = document.getElementById("heroSlider");
+  if (slider) {
+    const slides = slider.querySelectorAll(".hero__slide");
+    const dots = slider.querySelectorAll(".hero__dot");
+    let current = 0;
+    let timer;
 
-  const onScroll = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("is-scrolled", window.scrollY > 8);
-  };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+    const goTo = (index) => {
+      slides[current].classList.remove("hero__slide--active");
+      dots[current].classList.remove("is-active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("hero__slide--active");
+      dots[current].classList.add("is-active");
+    };
 
-  if (toggle && navbar) {
-    toggle.addEventListener("click", () => {
-      const open = navbar.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(open));
+    const start = () => {
+      timer = setInterval(() => goTo(current + 1), 6000);
+    };
+    const stop = () => clearInterval(timer);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => {
+        stop();
+        goTo(i);
+        start();
+      });
+    });
+
+    slider.addEventListener("mouseenter", stop);
+    slider.addEventListener("mouseleave", start);
+    start();
+  }
+
+  /* ---------- Product tabs (visual only) ---------- */
+  document.querySelectorAll(".section__tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const parent = tab.closest(".section__tabs");
+      if (!parent) return;
+      parent.querySelectorAll(".section__tab").forEach((t) => t.classList.remove("is-active"));
+      tab.classList.add("is-active");
+    });
+  });
+
+  /* ---------- Favorite toggle ---------- */
+  document.querySelectorAll(".product__fav").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      btn.classList.toggle("is-active");
+    });
+  });
+
+  /* ---------- Catalog button (visual only) ---------- */
+  const catalogBtn = document.getElementById("catalogBtn");
+  if (catalogBtn) {
+    catalogBtn.addEventListener("click", () => {
+      catalogBtn.classList.toggle("is-open");
     });
   }
 
-  /* ---------- Animated counters (IntersectionObserver) ---------- */
-  const counters = document.querySelectorAll("[data-counter]");
-  if ("IntersectionObserver" in window && counters.length) {
-    const animate = (el) => {
-      const target = parseFloat(el.dataset.counter);
-      const suffix = el.dataset.suffix || "";
-      const duration = 1400;
-      const start = performance.now();
-      const isFloat = !Number.isInteger(target);
+  /* ---------- Mobile burger ---------- */
+  const header = document.getElementById("header");
+  const burger = document.getElementById("burger");
+  if (burger && header) {
+    burger.addEventListener("click", () => {
+      const open = header.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+  }
 
-      const tick = (now) => {
-        const t = Math.min(1, (now - start) / duration);
-        const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
-        const value = target * eased;
-        const formatted = isFloat
-          ? value.toFixed(1)
-          : Math.round(value).toLocaleString("en-US");
-        el.textContent = formatted + suffix;
-        if (t < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    };
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            animate(entry.target);
-            io.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-    counters.forEach((c) => io.observe(c));
+  /* ---------- Search focus ---------- */
+  const searchInput = document.querySelector(".header__search-input");
+  if (searchInput) {
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const q = searchInput.value.trim();
+        if (q) {
+          // Demo only — no backend
+          console.log("[ORBIS] Поиск:", q);
+          alert("Демо-режим: поиск по запросу «" + q + "»");
+        }
+      }
+    });
   }
 
   /* ---------- Reveal on scroll ---------- */
   const revealTargets = document.querySelectorAll(
-    ".feature, .step, .stat, .section-head, .cta__inner"
+    ".cat, .product, .ws-card, .gb-card, .benefit, .factory-card, .section__head"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
 
   if ("IntersectionObserver" in window) {
-    const revealIo = new IntersectionObserver(
+    const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
             e.target.classList.add("is-visible");
-            revealIo.unobserve(e.target);
+            io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
-    revealTargets.forEach((el) => revealIo.observe(el));
+    revealTargets.forEach((el) => io.observe(el));
   } else {
     revealTargets.forEach((el) => el.classList.add("is-visible"));
   }
-
-  /* ---------- Hero balance counter (standalone) ---------- */
-  const heroAmount = document.querySelector(".hero__card-amount");
-  if (heroAmount) {
-    const valueEl = heroAmount.querySelector(".hero__card-value");
-    const target = parseFloat(heroAmount.dataset.counter || "0");
-    const duration = 1600;
-    const start = performance.now();
-
-    const tick = (now) => {
-      const t = Math.min(1, (now - start) / duration);
-      const eased = 1 - Math.pow(1 - t, 3);
-      const value = Math.round(target * eased);
-      if (valueEl) valueEl.textContent = value.toLocaleString("en-US");
-      if (t < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }
-
-  /* ---------- Smooth anchor offset for sticky navbar ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (id.length < 2) return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: "smooth" });
-      if (navbar && navbar.classList.contains("is-open")) {
-        navbar.classList.remove("is-open");
-        toggle && toggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  });
 })();
