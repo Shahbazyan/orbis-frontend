@@ -1,1 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbis — Global Finance, Simplified</title>
+  <meta name="description" content="Orbis makes global payments, currency exchange, and financial workflows effortless for modern teams." />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__brand" aria-label="Orbis home">
+        <span class="navbar__logo" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M4 16c4 4 8 6 12 6s8-2 12-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M4 16c4-4 8-6 12-6s8 2 12 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="2.2"/>
+          </svg>
+        </span>
+        <span class="navbar__name">Orbis</span>
+      </a>
 
+      <nav class="navbar__menu" id="navbarMenu" aria-label="Primary">
+        <a href="#features" class="navbar__link">Features</a>
+        <a href="#how" class="navbar__link">How it works</a>
+        <a href="#pricing" class="navbar__link">Pricing</a>
+        <a href="#faq" class="navbar__link">FAQ</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="/login.html" class="btn btn--ghost">Sign in</a>
+        <a href="/signup.html" class="btn btn--primary">Get started</a>
+      </div>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            New — Orbis Pay 2.0 is live
+          </span>
+          <h1 class="hero__title">
+            Global finance, <span class="gradient-text">simplified.</span>
+          </h1>
+          <p class="hero__subtitle">
+            Send, receive, and convert currencies across 180+ countries with transparent
+            rates, real-time settlement, and enterprise-grade security — all in one dashboard.
+          </p>
+          <div class="hero__cta">
+            <a href="/signup.html" class="btn btn--primary btn--lg">
+              Open your account
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#how" class="btn btn--outline btn--lg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <polygon points="6 4 20 12 6 20 6 4" fill="currentColor"/>
+              </svg>
+              Watch demo
+            </a>
+          </div>
+
+          <ul class="hero__trust">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              No setup fees
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              SOC 2 Type II
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              24/7 support
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="card hero__card">
+            <div class="hero__card-head">
+              <div class="hero__card-title">Live balance</div>
+              <div class="hero__card-badge">USD</div>
+            </div>
+            <div class="hero__card-amount" data-counter="128450">
+              <span class="hero__card-currency">$</span>
+              <span class="hero__card-value">0</span>
+              <span class="hero__card-cents">.00</span>
+            </div>
+            <div class="hero__card-change positive">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17l10-10M7 7h10v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              +4.82% this month
+            </div>
+            <div class="hero__card-chart">
+              <svg viewBox="0 0 300 80" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartGrad" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="var(--color-primary)" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="var(--color-primary)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path class="hero__chart-area" d="M0,60 C40,50 60,30 100,35 C140,40 160,55 200,45 C240,35 260,20 300,15 L300,80 L0,80 Z" fill="url(#chartGrad)"/>
+                <path class="hero__chart-line" d="M0,60 C40,50 60,30 100,35 C140,40 160,55 200,45 C240,35 260,20 300,15" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="card hero__mini hero__mini--tx">
+            <div class="hero__mini-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="hero__mini-body">
+              <div class="hero__mini-title">Transfer sent</div>
+              <div class="hero__mini-sub">EUR → GBP · 2s ago</div>
+            </div>
+            <div class="hero__mini-amount">€ 2,400.00</div>
+          </div>
+
+          <div class="card hero__mini hero__mini--rate">
+            <div class="hero__mini-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="hero__mini-body">
+              <div class="hero__mini-title">Live rate</div>
+              <div class="hero__mini-sub">1 USD = 0.92 EUR</div>
+            </div>
+            <div class="hero__mini-amount positive">▲ 0.12%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+      </div>
+    </section>
+
+    <!-- ============ LOGOS ============ -->
+    <section class="logos" aria-label="Trusted by">
+      <div class="container">
+        <p class="logos__label">Trusted by teams at</p>
+        <div class="logos__track">
+          <div class="logos__item">Acme Corp</div>
+          <div class="logos__item">Northwind</div>
+          <div class="logos__item">Globex</div>
+          <div class="logos__item">Initech</div>
+          <div class="logos__item">Umbrella</div>
+          <div class="logos__item">Hooli</div>
+          <div class="logos__item">Soylent</div>
+          <div class="logos__item">Massive Dynamic</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Features</span>
+          <h2 class="section-title">Everything you need to move money globally</h2>
+          <p class="section-subtitle">
+            A single platform for payments, FX, invoicing, and reconciliation — built for
+            teams that operate across borders.
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature feature--wide">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title">Instant global transfers</h3>
+            <p class="feature__desc">
+              Move funds to 180+ countries in seconds using local rails. No intermediary banks,
+              no hidden fees, no waiting.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title">Real FX rates</h3>
+            <p class="feature__desc">
+              Mid-market rates with a transparent, fixed markup. Lock rates for up to 72 hours.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title">Bank-grade security</h3>
+            <p class="feature__desc">
+              End-to-end encryption, biometric auth, and SOC 2 Type II compliance out of the box.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="feature__title">Multi-currency wallets</h3>
+            <p class="feature__desc">
+              Hold 40+ currencies in one account. Convert, send, or receive — all without leaving the app.
+            </p>
+          </article>
+
+          <article class="feature">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="feature__title">Automated invoicing</h3>
+            <p class="feature__desc">
+              Generate compliant invoices, auto-match payments, and reconcile in real time.
+            </p>
+          </article>
+
+          <article class="feature feature--wide">
+            <div class="feature__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18M7 14l4-4 4 4 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title">Analytics & reporting</h3>
+            <p class="feature__desc">
+              Live dashboards, exportable reports, and deep insights into cash flow, FX exposure,
+              and team activity — all in one place.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat">
+            <div class="stat__value" data-counter="180">0</div>
+            <div class="stat__label">Countries supported</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" data-counter="40">0</div>
+            <div class="stat__label">Currencies held</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" data-counter="99" data-suffix=".9%">0</div>
+            <div class="stat__label">Uptime SLA</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value" data-counter="12" data-suffix="M+">0</div>
+            <div class="stat__label">Transactions / month</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section-title">Up and running in under 5 minutes</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">01</div>
+            <h3 class="step__title">Create your account</h3>
+            <p class="step__desc">Sign up with your email, verify your identity, and you're in.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">02</div>
+            <h3 class="step__title">Fund your wallet</h3>
+            <p class="step__desc">Add funds via bank transfer, card, or wire in your local currency.</p>
+          </div>
+          <div class="step">
+            <div class="step__num">03</div>
+            <h3 class="step__title">Send globally</h3>
+            <p class="step__desc">Pay vendors, contractors, or teams anywhere — at the real rate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <h2 class="cta__title">Ready to simplify your global finance?</h2>
+        <p class="cta__subtitle">
+          Join thousands of teams moving money smarter with Orbis.
+        </p>
+        <div class="cta__actions">
+          <a href="/signup.html" class="btn btn--primary btn--lg">Start for free</a>
+          <a href="/contact.html" class="btn btn--outline btn--lg">Talk to sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="navbar__brand">
+          <span class="navbar__logo" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.2"/>
+              <path d="M4 16c4 4 8 6 12 6s8-2 12-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M4 16c4-4 8-6 12-6s8 2 12 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="16" y1="2" x2="16" y2="30" stroke="currentColor" stroke-width="2.2"/>
+            </svg>
+          </span>
+          <span class="navbar__name">Orbis</span>
+        </a>
+        <p class="footer__tagline">Global finance, simplified.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#">Security</a>
+        <a href="#">Roadmap</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Resources</h4>
+        <a href="#">Docs</a>
+        <a href="#">API</a>
+        <a href="#">Blog</a>
+        <a href="#">Status</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 Orbis, Inc. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/script.js" defer></script>
+</body>
+</html>
